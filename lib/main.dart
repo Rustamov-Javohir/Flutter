@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text('Simple Animated Container')),
+        appBar: AppBar(title: Text('Animated Container')),
         body: AnimatedContainerExample(),
       ),
     );
@@ -21,7 +21,7 @@ class AnimatedContainerExample extends StatefulWidget {
 }
 
 class _AnimatedContainerExampleState extends State<AnimatedContainerExample> {
-  bool _isExpanded = false; // Kenglik holati
+  bool _isExpanded = false; 
 
   @override
   Widget build(BuildContext context) {
@@ -29,18 +29,18 @@ class _AnimatedContainerExampleState extends State<AnimatedContainerExample> {
       child: GestureDetector(
         onTap: () {
           setState(() {
-            _isExpanded = !_isExpanded; // Kenglikni o'zgartirish
+            _isExpanded = !_isExpanded;
           });
         },
         child: AnimatedContainer(
-          duration: Duration(seconds: 1), // Animatsiya vaqti
-          width: _isExpanded ? 200 : 100, // Kenglik
-          height: 100, // Balandlik
-          color: _isExpanded ? Colors.blue : Colors.red, // Rang
+          duration: Duration(seconds: 1), 
+          width: _isExpanded ? 400 : 200, 
+          height: 100, 
+          color: _isExpanded ? Colors.blue : Colors.red, 
           alignment: Alignment.center,
           child: Text(
-            'Tap Me!',
-            style: TextStyle(color: Colors.white, fontSize: 24),
+            'Menga Bos!',
+            style: TextStyle(color: Colors.white, fontSize: 20),
           ),
         ),
       ),
